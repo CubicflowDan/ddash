@@ -10822,7 +10822,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   line-height: 28px;
 }
 
-.small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #footer, #commits .commit .commit-float-container .commit-date, #commits .commit .commit-float-container .commit-name {
+.small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #footer, #commits .commit .commit-float-container .commit-date, #commits .commit .commit-float-container .commit-name, #gallery span.image-label {
   font-size: 13px;
   line-height: 16px;
 }
@@ -10849,7 +10849,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     font-size: 18px;
     line-height: 30px;
   }
-  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #footer, #commits .commit .commit-float-container .commit-date, #commits .commit .commit-float-container .commit-name {
+  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #footer, #commits .commit .commit-float-container .commit-date, #commits .commit .commit-float-container .commit-name, #gallery span.image-label {
     font-size: 15px;
     line-height: 18px;
   }
@@ -10876,7 +10876,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     font-size: 19px;
     line-height: 31px;
   }
-  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #footer, #commits .commit .commit-float-container .commit-date, #commits .commit .commit-float-container .commit-name {
+  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #footer, #commits .commit .commit-float-container .commit-date, #commits .commit .commit-float-container .commit-name, #gallery span.image-label {
     font-size: 16px;
     line-height: 19px;
   }
@@ -11648,12 +11648,19 @@ text.label-percent {
   margin-top: 30px;
 }
 
-#gallery .gallery-img {
-  width: 100%;
-  height: 300px;
+#gallery {
+  margin-top: 60px;
 }
 
-#gallery .gallery-img img {
+#gallery .col {
+  padding-bottom: 20px;
+}
+
+#gallery a.image {
+  display: block;
   width: 100%;
-  height: auto;
+  height: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

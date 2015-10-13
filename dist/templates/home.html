@@ -22,21 +22,32 @@
         </div>
 
         <div class="col s12 center-align info">
-
-            <span class="info-line">Last Update On: <span class="label">{{vm.data.git[0].date | date:'medium'}}</span></span>
+            <span class="info-line">Current Phase: <span class="label">{{vm.data.currentPhase}}</span></span>
+            <span class="info-line">Last Update At: <span class="label">{{vm.data.git[0].date | date:'medium'}}</span></span>
             <span class="info-line">Update Message: <span class="label">{{vm.data.git[0].message}}</span></span>
-            <a href="#/git" class="waves-effect waves-light btn">All Commits</a>
 
         </div>
         
     </div>
+
+</div>
+
+<hr class="center-align">
+
+<div id="gallery">
     
-    <div id="gallery">
-        <div ng-repeat="image in vm.data.gitImages">
-            <div class="gallery-img">
-                <img src="{{image.download_url}}">
-            </div>
+    <h2>Images</h2>
+    
+    <div class="row">
+        <div class="col s6 m3" ng-repeat="image in vm.data.gallery | limitTo:2">
+            <a href="{{image.imgUrl}}" class="image" style="background-image: url({{image.imgUrl}});">
+            </a>
+            <span class="image-label">{{image.imgTitle}}</span>
         </div>
     </div>
-
+    
+    <div class="center-align">
+        <a href="#/git" class="waves-effect waves-light btn">View More</a>
+    </div>
+        
 </div>

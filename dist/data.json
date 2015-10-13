@@ -68,6 +68,18 @@
         }
     ],
     
+    
+    "gallery": [
+        {
+        "imgTitle": "DDash Screenshot", 
+        "imgUrl": "assets/gallery/app.jpg"
+        },
+        {
+        "imgTitle": "DDash Logo", 
+        "imgUrl": "assets/gallery/logo.jpg"
+        }
+    ],
+    
     "files": [
         {
         "name": "Project Specs", 
