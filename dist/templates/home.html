@@ -23,20 +23,19 @@
 
         <div class="col s12 center-align info">
 
-            <span class="info-line">Started on: <span class="label">{{vm.data.startDate}}</span></span>
-            <span class="info-line">Completion Goal: <span class="label">{{vm.data.goal}}</span></span>
-            <span class="info-line">Current Phase: <span class="label">{{vm.data.currentPhase}}</span></span>
-            <a ui-sref="timeline" class="waves-effect waves-light btn">View Timeline</a>
-        </div>
-
-        <div class="col s12 center-align info">
-
-            <span class="info-title">Git:</span>
-            <span class="info-line">Last Commit Date: <span class="label">{{vm.data.git[0].date | date:'medium'}}</span></span>
-            <span class="info-line">Commited By: <span class="label">{{vm.data.git[0].name}}</span></span>
-            <span class="info-line">Commit Message: <span class="label">{{vm.data.git[0].message}}</span></span>
+            <span class="info-line">Last Update On: <span class="label">{{vm.data.git[0].date | date:'medium'}}</span></span>
+            <span class="info-line">Update Message: <span class="label">{{vm.data.git[0].message}}</span></span>
             <a href="#/git" class="waves-effect waves-light btn">All Commits</a>
 
+        </div>
+        
+    </div>
+    
+    <div id="gallery">
+        <div ng-repeat="image in vm.data.gitImages">
+            <div class="gallery-img">
+                <img src="{{image.download_url}}">
+            </div>
         </div>
     </div>
 

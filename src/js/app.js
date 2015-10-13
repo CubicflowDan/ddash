@@ -62,9 +62,23 @@ angular.module('app', [
         var apiUrl = 'https://api.github.com/repos/'+username+'/'+repoName+'/contents/'+imagesPath;
         
         return $http.get(apiUrl, {cache:true}).then(function(response){
-            return response;
-        }).catch(function(err){
-            return err;
+            
+            localStorage.setItem("cf-github-ddimages", JSON.stringify(response.data));
+            
+            return response.data;
+            
+        }).catch(function(response){
+            
+            var savedData = localStorage.getItem("cf-github-ddimages");
+            var parsedData = JSON.parse(savedData);
+            
+            if (typeof parsedData === 'object'){
+                console.log('Returning Old Data | ERROR IN gitApiFactory', response);
+                return parsedData
+            } else {
+                console.log('ERROR IN gitApiFactory', response);
+            }
+            
         });
         
     };

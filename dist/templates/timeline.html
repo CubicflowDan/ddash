@@ -5,6 +5,14 @@
         <h2>{{vm.data.projectName}}</h2>
         <span id="project-name-label">Timeline</span>
     </div>
+    
+    <div class="col s12 center-align info">
+
+        <span class="info-line">Started on: <span class="label">{{vm.data.startDate}}</span></span>
+        <span class="info-line">Completion Goal: <span class="label">{{vm.data.goal}}</span></span>
+        <span class="info-line">Current Phase: <span class="label">{{vm.data.currentPhase}}</span></span>
+        
+    </div>
 
     <div id="phases">
         <div ng-repeat="phase in vm.data.timeline" class="phase">

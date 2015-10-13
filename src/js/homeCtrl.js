@@ -13,8 +13,8 @@ var HomeCtrl = function(dataFactory, gitApiFactory, data){
     }
     
     if(data.repoType === 'github'){
-        gitApiFactory.ddImages(data.gitUsername, data.gitRepoName).then(function(gitData){
-            console.log(gitData);
+        gitApiFactory.ddImages(data.gitUsername, data.gitRepoName).then(function(gitImages){
+            vm.data.gitImages = gitImages;
         })
     }
     
