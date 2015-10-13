@@ -146,6 +146,11 @@ div.divider {
     border: none;
 }
 
+
+.accent {
+    color: $accent;
+}
+
 .page {
     transition: opacity 0.8s;
     width: 100%;
@@ -333,46 +338,42 @@ text.label-percent {
 
 #commits {
     
-    border-top: 1px solid $accent;
+    //border-top: 1px solid $accent;
 
     .commit {
-
-        background-color: #FFF;
-        padding: 10px 15px 15px 15px;
+        
+        margin-bottom: 30px;
+        padding: 10px;
+        background-color: #333;
         border-radius: 10px;
-        clear: both;
-        margin-top: 30px;
         
-//        opacity: 0;
-//        transform: translateY(-10px);
-        
-        &.active {
-            opacity: 1;
-            transform: translateY(0px);
+
+        .row {
+            margin-bottom: 0px;
         }
-
-
+        
+        .commit-avatar {
+            
+            
+            img {
+                
+                width: 100%;
+            }
+        }
+        
         .commit-message {
-            clear: both;
-            @extend .dark-1-txt;
+            @extend .small-txt;
         }
-
-        .commit-float-container {
-
-            height: 15px;
-            margin-top: 5px;
-            @extend .dark-1-txt;
-
-            .commit-date {
-                float: right;
+        
+        .commit-labels {
+                        
+            .commit-meta {
+                margin-top: 10px;
                 @extend .small-txt;
             }
-            .commit-name {
-                float: left;
-                @extend .small-txt;
-            }
+            
         }
-
+        
     }
     
 }

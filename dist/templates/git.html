@@ -6,18 +6,56 @@
         <span id="project-name-label">Git Updates</span>
     </div>
 
+
     <div id="commits">
-        <div ng-repeat="commit in vm.gitData" class="commit">
-            <div class="commit-message">{{commit.message}}</div>
-            <div class="commit-float-container">
-                <div class="commit-date">{{ commit.date | date: 'medium' }}</div>
-                <div class="commit-name">By {{commit.name}}</div>
+        
+        <h2>Latest Change:</h2>
+        
+        <div ng-repeat="commit in vm.gitData">
+            
+            <!-- for most recent commit display this-->
+            <div ng-if="$first" class="commit commit-first">
+                
+                <div class="row">
+                    <div class="col s2 commit-avatar">
+                        <img class="circle" ng-src="{{commit.avatarUrl}}">
+                    </div>
+                    <div class="col s10 commit-labels">
+                        <div class="commit-message"><span class="accent">message:</span> {{commit.message}}</div>
+                        <div class="commit-meta">By {{commit.name}} on {{commit.date | date: 'medium'}}</div>
+                    </div>
+                </div>
+                
             </div>
+            
+            <div ng-if="$first" class="center-align">
+            <a href="{{data.repoUrl}}" class="waves-effect waves-light btn">View on GitHub</a>
+            </div>
+            
         </div>
-    </div>
-    
-    <div id="view-repo" class="center-align">
-        <a href="{{data.repoUrl}}" class="waves-effect waves-light btn">View on GitHub</a>
+        
+
+        
+        <h2>Previous Commits:</h2>
+        <div ng-repeat="commit in vm.gitData">
+            
+            <!-- for most recent commit display this-->
+            <div ng-if="!$first" class="commit">
+                
+                <div class="row">
+                    <div class="col s2 commit-avatar">
+                        <img class="circle" ng-src="{{commit.avatarUrl}}">
+                    </div>
+                    <div class="col s10 commit-labels">
+                        <div class="commit-message"><span class="accent">message:</span> {{commit.message}}</div>
+                        <div class="commit-meta">By {{commit.name}} on {{commit.date | date: 'medium'}}</div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
     </div>
     
 </div>

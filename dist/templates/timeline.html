@@ -23,6 +23,7 @@
             </div>
             
             <div ng-repeat="task in phase.items" class="task">
+                
                 <div class="task-labels" ng-class="task.status">
                     <div ng-class="task.status" class="task-name">{{task.name}}</div>
                     <div ng-class="task.status" class="task-status">
@@ -31,6 +32,7 @@
                         <i ng-if="task.status == 'incomplete'" class="material-icons">not_interested</i>
                     </div>
                 </div>
+                
             </div>
             
         </div>

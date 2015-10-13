@@ -63,7 +63,8 @@ angular.module('app', [
                 constructedData[i] = {
                     date: response.data[i].commit.committer.date,
                     name: response.data[i].commit.author.name,
-                    message: response.data[i].commit.message
+                    message: response.data[i].commit.message,
+                    avatarUrl: response.data[i].author.avatar_url
                 };
             }
             
