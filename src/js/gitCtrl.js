@@ -4,7 +4,7 @@ var GitCtrl = function(data, gitApiFactory) {
     vm.data = data;
 
     if(vm.data.repoType === 'github'){
-        gitApiFactory.gitHub(vm.data.apiUrl).then(function(gitData){
+        gitApiFactory.gitHub(data.gitUsername, data.gitRepoName).then(function(gitData){
             console.log(gitData);
             vm.gitData = gitData;
         });

@@ -10786,7 +10786,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   font-family: BrandonText-Medium, sans-serif;
 }
 
-.dark-1-txt, h1, h2, h3, h4, h5, .side-nav li a:hover, #commits .commit .commit-message, #commits .commit .commit-float-container {
+.dark-1-txt, h1, h2, h3, h4, h5, .side-nav li a:hover {
   color: #383735;
 }
 
@@ -10819,10 +10819,10 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 
 .med-txt, body, footer .footer-label, #cf-inpageindex h1, #cf-inpageindex h2, #cf-inpageindex h3, #cf-inpageindex h4, #cf-inpageindex h5 {
   font-size: 16px;
-  line-height: 28px;
+  line-height: 20px;
 }
 
-.small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #footer, #commits .commit .commit-float-container .commit-date, #commits .commit .commit-float-container .commit-name, #gallery span.image-label {
+.small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, #gallery span.image-label {
   font-size: 13px;
   line-height: 16px;
 }
@@ -10847,9 +10847,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   }
   .med-txt, body, footer .footer-label, #cf-inpageindex h1, #cf-inpageindex h2, #cf-inpageindex h3, #cf-inpageindex h4, #cf-inpageindex h5 {
     font-size: 18px;
-    line-height: 30px;
+    line-height: 22px;
   }
-  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #footer, #commits .commit .commit-float-container .commit-date, #commits .commit .commit-float-container .commit-name, #gallery span.image-label {
+  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, #gallery span.image-label {
     font-size: 15px;
     line-height: 18px;
   }
@@ -10874,9 +10874,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   }
   .med-txt, body, footer .footer-label, #cf-inpageindex h1, #cf-inpageindex h2, #cf-inpageindex h3, #cf-inpageindex h4, #cf-inpageindex h5 {
     font-size: 19px;
-    line-height: 31px;
+    line-height: 23px;
   }
-  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #footer, #commits .commit .commit-float-container .commit-date, #commits .commit .commit-float-container .commit-name, #gallery span.image-label {
+  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, #gallery span.image-label {
     font-size: 16px;
     line-height: 19px;
   }
@@ -11429,6 +11429,10 @@ div.divider {
   border: none;
 }
 
+.accent {
+  color: #F67161;
+}
+
 .page {
   -webkit-transition: opacity 0.8s;
           transition: opacity 0.8s;
@@ -11591,40 +11595,23 @@ text.label-percent {
   margin-bottom: 10px;
 }
 
-#commits {
-  border-top: 1px solid #F67161;
-}
-
 #commits .commit {
-  background-color: #FFF;
-  padding: 10px 15px 15px 15px;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: #333;
   border-radius: 10px;
-  clear: both;
-  margin-top: 30px;
 }
 
-#commits .commit.active {
-  opacity: 1;
-  -webkit-transform: translateY(0px);
-      -ms-transform: translateY(0px);
-          transform: translateY(0px);
+#commits .commit .row {
+  margin-bottom: 0px;
 }
 
-#commits .commit .commit-message {
-  clear: both;
+#commits .commit .commit-avatar img {
+  width: 100%;
 }
 
-#commits .commit .commit-float-container {
-  height: 15px;
-  margin-top: 5px;
-}
-
-#commits .commit .commit-float-container .commit-date {
-  float: right;
-}
-
-#commits .commit .commit-float-container .commit-name {
-  float: left;
+#commits .commit .commit-labels .commit-meta {
+  margin-top: 10px;
 }
 
 #view-repo {
