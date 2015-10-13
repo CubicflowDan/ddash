@@ -2,9 +2,10 @@
     "projectName" : "Truck Adventures",
     "startDate" : "11/11/11",
     "goal" : "11/11/12",
-    "repoUrl" : "https://github.com/BackdoorDan/in-page-nav",
-    "apiUrl" : "https://api.github.com/repos/BackdoorDan/in-page-nav/commits",
     "repoType" : "github",
+    "gitUsername" : "BackdoorDan",
+    "gitRepoName" : "ddash",
+    "repoUrl" : "https://github.com/BackdoorDan/ddash.git",
     
     "currentPhase" : "Discovery",
     "phaseCompletion": 80,

@@ -49,7 +49,33 @@ angular.module('app', [
 
 .factory('gitApiFactory', ['$http', function($http){
     
-    var gitHub = function(apiUrl){
+    var gitApiFactory = {};
+    
+    
+    
+    
+    
+    gitApiFactory.ddImages = function(username, repoName){
+        
+        var imagesPath = 'dd-images'
+        
+        var apiUrl = 'https://api.github.com/repos/'+username+'/'+repoName+'/contents/'+imagesPath;
+        
+        return $http.get(apiUrl, {cache:true}).then(function(response){
+            return response;
+        }).catch(function(err){
+            return err;
+        });
+        
+    };
+    
+    
+    
+    
+    
+    gitApiFactory.gitHub = function(username, repoName){
+        
+        var apiUrl = 'https://api.github.com/repos/'+username+'/'+repoName+'/commits';
         
         return $http.get(apiUrl, {cache: true}).then(function(response){
             
@@ -83,9 +109,7 @@ angular.module('app', [
         
     };
     
-    return {
-        gitHub: gitHub
-    }
+    return gitApiFactory;
     
 }])
 
