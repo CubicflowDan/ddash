@@ -11595,6 +11595,11 @@ text.label-percent {
   margin-bottom: 10px;
 }
 
+#commits .latest-commit {
+  margin-bottom: 60px;
+  margin-top: 40px;
+}
+
 #commits .commit {
   margin-bottom: 30px;
   padding: 10px;
@@ -11606,8 +11611,17 @@ text.label-percent {
   margin-bottom: 0px;
 }
 
+#commits .commit .commit-avatar {
+  position: absolute;
+  width: 50px;
+}
+
 #commits .commit .commit-avatar img {
   width: 100%;
+}
+
+#commits .commit .commit-labels {
+  margin-left: 65px;
 }
 
 #commits .commit .commit-labels .commit-meta {

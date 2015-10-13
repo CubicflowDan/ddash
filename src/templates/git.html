@@ -8,23 +8,22 @@
 
 
     <div id="commits">
+
         
-        <h2>Latest Change:</h2>
-        
-        <div ng-repeat="commit in vm.gitData">
+        <div class="latest-commit" ng-repeat="commit in vm.gitData">
+            
+            <h2 ng-if="$first">Latest Change:</h2>
             
             <!-- for most recent commit display this-->
             <div ng-if="$first" class="commit commit-first">
                 
-                <div class="row">
-                    <div class="col s2 commit-avatar">
+                    <div class="commit-avatar">
                         <img class="circle" ng-src="{{commit.avatarUrl}}">
                     </div>
-                    <div class="col s10 commit-labels">
+                    <div class="commit-labels">
                         <div class="commit-message"><span class="accent">message:</span> {{commit.message}}</div>
-                        <div class="commit-meta">By {{commit.name}} on {{commit.date | date: 'medium'}}</div>
+                        <div class="commit-meta">{{commit.date | date: 'medium'}}</div>
                     </div>
-                </div>
                 
             </div>
             
@@ -35,21 +34,18 @@
         </div>
         
 
-        
-        <h2>Previous Commits:</h2>
+        <h2> Previous Changes </h2>
         <div ng-repeat="commit in vm.gitData">
             
             <!-- for most recent commit display this-->
             <div ng-if="!$first" class="commit">
                 
-                <div class="row">
-                    <div class="col s2 commit-avatar">
-                        <img class="circle" ng-src="{{commit.avatarUrl}}">
-                    </div>
-                    <div class="col s10 commit-labels">
-                        <div class="commit-message"><span class="accent">message:</span> {{commit.message}}</div>
-                        <div class="commit-meta">By {{commit.name}} on {{commit.date | date: 'medium'}}</div>
-                    </div>
+                <div class="commit-avatar">
+                    <img class="circle" ng-src="{{commit.avatarUrl}}">
+                </div>
+                <div class="commit-labels">
+                    <div class="commit-message"><span class="accent">message:</span> {{commit.message}}</div>
+                    <div class="commit-meta">{{commit.date | date: 'medium'}}</div>
                 </div>
                 
             </div>

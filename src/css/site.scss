@@ -340,13 +340,17 @@ text.label-percent {
     
     //border-top: 1px solid $accent;
 
+    .latest-commit {
+        margin-bottom: 60px;
+        margin-top: 40px;
+    }
+    
     .commit {
         
         margin-bottom: 30px;
         padding: 10px;
         background-color: #333;
         border-radius: 10px;
-        
 
         .row {
             margin-bottom: 0px;
@@ -354,6 +358,8 @@ text.label-percent {
         
         .commit-avatar {
             
+            position: absolute;
+            width: 50px;
             
             img {
                 
@@ -366,7 +372,9 @@ text.label-percent {
         }
         
         .commit-labels {
-                        
+            
+            margin-left: 65px;
+            
             .commit-meta {
                 margin-top: 10px;
                 @extend .small-txt;
