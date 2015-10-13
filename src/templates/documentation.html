@@ -1,0 +1,15 @@
+
+<div id="documentation" class="page">
+
+    <div class="header">
+        <h2>{{vm.data.projectName}}</h2>
+        <span id="project-name-label">Documentation</span>
+    </div>
+
+    <div id="files">
+        <div ng-repeat="file in vm.data.files" class="file">
+            <a href="{{file.location}}" class="waves-effect waves-light btn">{{file.name}}</a>
+        </div>
+    </div>
+
+</div>

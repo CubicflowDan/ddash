@@ -1,0 +1,96 @@
+{
+    "projectName" : "Truck Adventures",
+    "startDate" : "11/11/11",
+    "goal" : "11/11/12",
+    "repoUrl" : "https://github.com/BackdoorDan/in-page-nav",
+    "apiUrl" : "https://api.github.com/repos/BackdoorDan/in-page-nav/commits",
+    "repoType" : "github",
+    
+    "currentPhase" : "Discovery",
+    "phaseCompletion": 80,
+    "totalCompletion": 10,
+    
+    "totalCost": 4500,
+    "paymentDue": "On Completion",
+    "paymentsReceived": [
+        {
+            "ammount": 500,
+            "date": "06/10/14"
+        },
+        {
+            "ammount": 1500,
+            "date": "10/10/14"
+        },
+        {
+            "ammount": 1500,
+            "date": "01/12/14"
+        }
+    ],
+    
+    "timeline": [
+        {
+        "phaseName": "Discovery",
+        "items": [
+            {"name": "Discovery Meeting", "status": "done"},
+            {"name": "Brainstorming Meeting", "status": "done"},
+            {"name": "Market Research", "status": "done"},
+            {"name": "Asset Gathering", "status": "done"}
+            ]
+        },
+        {
+        "phaseName": "Planning",
+        "items": [
+            {"name": "Site Structure", "status": "done"},
+            {"name": "Wireframes", "status": "done"},
+            {"name": "Develop Stack", "status": "done"},
+            {"name": "Copy Draft", "status": "done"}
+            ]
+        },
+        {
+        "phaseName": "Design",
+        "items": [
+            {"name": "Brand Design", "status": "done"},
+            {"name": "Style Guide", "status": "in-progress"},
+            {"name": "Page Layout", "status": "in-progress"},
+            {"name": "Responsive Design", "status": "incomplete"}
+            ]
+        },
+        {
+        "phaseName": "Development",
+        "items": [
+            {"name": "Server Setup", "status": "incomplete"},
+            {"name": "CMS install", "status": "incomplete"},
+            {"name": "Theme Creation", "status": "incomplete"},
+            {"name": "Ecommerce Integration", "status": "incomplete"},
+            {"name": "QC Testing", "status": "incomplete"}
+            ]
+        }
+    ],
+    
+    "files": [
+        {
+        "name": "Project Specs", 
+        "fileLocation": "google.com"
+        },
+        {
+        "name": "Work Agreement", 
+        "location": "google.com"
+        },
+        {
+        "name": "Nondisclosure Agreement", 
+        "location": "google.com"
+        },
+        {
+        "name": "Modified Work Agreement", 
+        "location": "google.com"
+        },
+        {
+        "name": "Initial Deposit Invoice", 
+        "location": "google.com"
+        }
+    ]
+    
+    
+    
+    
+}

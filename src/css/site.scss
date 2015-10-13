@@ -1,0 +1,410 @@
+body {
+    background-color: #171717;
+    @extend .light-1-txt;
+}
+#content-container {
+    background-color: $base-dark;;
+    max-width: 1000px;
+    width: 100%;
+}
+
+@media #{$medium-and-up} {
+    #content-container {
+        padding-left: 200px;
+        float: left;
+    }
+}
+
+
+
+#sidenav {
+    width: 200px;
+    position: fixed;
+    height: 100%;
+    background-color: rgba(33,33,33,1);
+    
+    .logo {
+        
+        img {
+            width: 100%;
+            padding: 42px 50px 40px 50px;
+            opacity: 0.2;
+        }
+    }
+    
+    .nav-links {
+    
+        a {
+            @extend .light-1-font;
+            @extend .light-2-txt;
+            display: block;
+            height: 45px;
+            padding-left: 20px;
+            line-height: 40px;
+            transition: all 0.3s;
+            box-sizing: border-box;
+            border-left: 0px solid transparent;
+            
+            &:hover {
+                color: $accent-toned;
+                border-left: 4px solid transparent;
+            }
+            
+            &.active {
+                color: $accent;
+                border-left: 4px solid $accent;
+            }
+            
+        }
+        
+    }
+      
+}
+
+
+
+nav {
+    background-color: #212121;
+    position: fixed;
+    bottom: 0px;
+    height: 51px;
+    z-index: 1000;
+    text-align: center;
+    border-top: 1px solid #333;
+    padding: 0px;
+    
+    a {
+        
+        margin: 0px;
+        padding: 5px 0px 0px 0px;
+        transition: all 0.5s;
+        text-align: center;
+        width: 20%;
+        height: 50px;
+        display: block;
+        float: left;
+        border-bottom: 1px solid transparent;
+        line-height: 25px;
+        font-size: 12px;
+        
+        i.material-icons {
+            display: block;
+            margin: 0px;
+            font-size: 20px;
+        }
+        
+        &:hover {
+            color: $accent-toned;
+        }
+        &.active {
+            color: $accent;
+            border-bottom: 1px solid $accent;
+        }
+        
+        span.label {
+            margin: 0px;
+            color: white;
+        }
+    }
+}
+
+
+.view {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+    opacity: 0;
+}
+
+
+@media #{$medium-and-up}{
+    main.container {
+        margin-top: 10px;
+        margin-bottom: 50px;
+        overflow: hidden;
+        width: 85%;
+    }
+}
+
+em {
+    font-style: normal;
+    color: $accent;
+}
+
+h2 {
+    @extend .light-1-txt;
+}
+
+div.divider {
+    background-color: transparent;
+    border: none;
+}
+
+.page {
+    transition: opacity 0.8s;
+    width: 100%;
+}
+
+.info {
+    margin-bottom: 40px;
+    .info-line {
+        
+    @extend .small-txt;
+    display: block;
+    margin: 7px;
+    }
+    
+    .label {
+        font-style: normal;
+        color: $accent;
+    }
+    
+    .btn {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 30px;
+        line-height: 30px;
+    }
+}
+
+.graph {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    height: 140px;
+    display: block;
+}
+
+path.base {
+    fill: #333;
+}
+path.completed {
+    fill: $accent-toned;
+}
+
+
+text.label-text {
+    fill: #FFF;
+    font-size: 10px;
+}
+text.label-percent {
+    fill: $accent-toned;
+    font-size: 30px;
+}
+
+
+.header {
+    
+    padding-top: 0px;
+    margin-bottom: 30px;
+    
+    h2 {
+        @extend .light-1-txt;
+        margin-bottom: -5px;
+    }
+    span {
+        
+    }
+}
+
+#payment {
+    margin-bottom: 30px;
+}
+
+#documents {
+
+    margin-bottom: 30px;
+    .btn {
+        margin-bottom: 15px;
+    }
+}
+
+#timeline {
+    #phases {
+        .phase {
+            
+            height: auto;
+            margin-bottom: 20px;
+            
+            .phase-labels {
+                height: 40px;   
+                @extend .large-txt;
+                @extend .light-1-font;
+            }
+            .phase-name {
+                
+                float: left;
+                
+                @extend .large-txt;
+                @extend .light-1-font;
+
+            }
+            .phase-completion {
+                
+                float: right;
+                
+                &.done {
+                    color: $accent-toned;
+                }
+                &.in-progress {
+                    color: #ebbc52;
+                }
+                &.incomplete {
+                    color: $accent;
+                }
+            }
+            
+            .task {
+                padding: 0px 0px 0px 0px;
+                margin-left: 0px;
+                clear: both;
+                
+                .task-labels {
+                    
+                    height: 40px;
+                    line-height: 40px;
+                    padding-left: 20px;
+                    
+                    &.done {
+                        border-left: 3px solid $accent-toned;
+                    }
+                    &.in-progress {
+                        border-left: 3px solid #ebbc52;;
+                    }
+                    &.incomplete {
+                        border-left: 3px solid $accent;;
+                    }
+                
+                }
+                
+                .task-name {
+                    height: 40px;
+                    float: left;
+                    margin-left: 0px;
+                    
+                    
+                }
+                .task-status {
+                    height: 40px;
+                    float: right;
+                    
+                    &.done {
+                    color: $accent-toned;
+                    }
+                    &.in-progress {
+                        color: #ebbc52;
+                    }
+                    &.incomplete {
+                        color: $accent;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+
+
+
+#footer {
+    @extend .small-txt;
+    @extend .center-align;
+    @extend .light-1-txt;
+    opacity: 0.2;
+    margin-bottom: 80px;
+    margin-top: 10px;
+    
+    img.cf-logo {
+        display: block;
+        margin: 0px auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+#commits {
+    
+    border-top: 1px solid $accent;
+
+    .commit {
+
+        background-color: #FFF;
+        padding: 10px 15px 15px 15px;
+        border-radius: 10px;
+        clear: both;
+        margin-top: 30px;
+        
+//        opacity: 0;
+//        transform: translateY(-10px);
+        
+        &.active {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+
+        .commit-message {
+            clear: both;
+            @extend .dark-1-txt;
+        }
+
+        .commit-float-container {
+
+            height: 15px;
+            margin-top: 5px;
+            @extend .dark-1-txt;
+
+            .commit-date {
+                float: right;
+                @extend .small-txt;
+            }
+            .commit-name {
+                float: left;
+                @extend .small-txt;
+            }
+        }
+
+    }
+    
+}
+
+#view-repo {
+    margin-top: 40px;
+}
+
+
+
+
+
+
+#payment {
+    .payment {
+        height: 40px;
+        .payment-ammount {
+            float: left;
+        }
+        .payment-date {
+            float: right;
+        }
+    }
+}
+
+
+
+
+
+
+#documentation {
+    .file {
+        text-align: center;
+        margin-top: 30px;
+    }
+}

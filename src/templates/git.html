@@ -1,0 +1,23 @@
+
+<div id="git" class="page">
+
+    <div class="header">
+        <h2>{{vm.data.projectName}}</h2>
+        <span id="project-name-label">Git Updates</span>
+    </div>
+
+    <div id="commits">
+        <div ng-repeat="commit in vm.gitData" class="commit">
+            <div class="commit-message">{{commit.message}}</div>
+            <div class="commit-float-container">
+                <div class="commit-date">{{ commit.date | date: 'medium' }}</div>
+                <div class="commit-name">By {{commit.name}}</div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="view-repo" class="center-align">
+        <a href="{{data.repoUrl}}" class="waves-effect waves-light btn">View on GitHub</a>
+    </div>
+    
+</div>
