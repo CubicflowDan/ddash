@@ -1,15 +1,21 @@
 {
-    "projectName" : "Truck Adventures",
+    "projectName" : "DDash Cubicflow",
+    "projectUrl" : "cubicflow.com/ddash",
+    
     "startDate" : "11/11/11",
     "goal" : "11/11/12",
+    
     "repoType" : "github",
     "gitUsername" : "BackdoorDan",
     "gitRepoName" : "ddash",
     "repoUrl" : "https://github.com/BackdoorDan/ddash.git",
     
-    "currentPhase" : "Discovery",
-    "phaseCompletion": 80,
-    "totalCompletion": 10,
+    "developerEmail" : "dan.mcnair@gmail.com",
+    "developerName": "Cubicflow",
+    
+    "currentPhase" : "Design",
+    "phaseCompletion": 60,
+    "totalCompletion": 40,
     
     "totalCost": 4500,
     "paymentDue": "On Completion",

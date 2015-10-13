@@ -22,10 +22,29 @@
         </div>
 
         <div class="col s12 center-align info">
+            
             <span class="info-line">Current Phase: <span class="label">{{vm.data.currentPhase}}</span></span>
+            
+            <span class="info-line">Project Url: <span class="label">{{vm.data.projectUrl}}</span></span>
             <span class="info-line">Last Update At: <span class="label">{{vm.data.git[0].date | date:'medium'}}</span></span>
             <span class="info-line">Update Message: <span class="label">{{vm.data.git[0].message}}</span></span>
 
+            
+            <div id="grid" class="row">
+                <div class="col s6 cell">
+                    <div class="payments fill">
+                        <i class="material-icons medium status-good">done</i>
+                        <span class="label">No Payments Due</span>
+                    </div>
+                </div>
+                <div class="col s6 cell">
+                    <div class="fill">
+                        <i class="material-icons medium">contact_phone</i>
+                        <span class="label">Contact {{vm.data.developerName}}</span>
+                    </div>
+                </div>
+            </div>
+            
         </div>
         
     </div>

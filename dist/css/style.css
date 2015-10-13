@@ -10794,7 +10794,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   color: #737A7E;
 }
 
-.light-1-txt, #main-nav .row a:hover, #main-nav .row a.active, footer .footer-label, body, h2, .header h2, #footer {
+.light-1-txt, #main-nav .row a:hover, #main-nav .row a.active, footer .footer-label, body, h2, .header h2, #grid .cell .fill .label, #footer, .contact-us.warn {
   color: #FFF;
 }
 
@@ -10822,7 +10822,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   line-height: 20px;
 }
 
-.small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, #gallery span.image-label {
+.small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #grid .cell .fill .label, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, .contact-us.warn, #gallery span.image-label {
   font-size: 13px;
   line-height: 16px;
 }
@@ -10849,7 +10849,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     font-size: 18px;
     line-height: 22px;
   }
-  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, #gallery span.image-label {
+  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #grid .cell .fill .label, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, .contact-us.warn, #gallery span.image-label {
     font-size: 15px;
     line-height: 18px;
   }
@@ -10876,7 +10876,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     font-size: 19px;
     line-height: 23px;
   }
-  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, #gallery span.image-label {
+  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #grid .cell .fill .label, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, .contact-us.warn, #gallery span.image-label {
     font-size: 16px;
     line-height: 19px;
   }
@@ -11494,6 +11494,28 @@ text.label-percent {
   margin-bottom: -5px;
 }
 
+#grid {
+  margin-top: 10px;
+  padding: 40px;
+}
+
+#grid .cell {
+  padding: 0px;
+}
+
+#grid .cell .fill {
+  margin: 0px auto;
+  border-radius: 10px;
+}
+
+#grid .cell .fill i.status-good {
+  color: #87ea7b;
+}
+
+#grid .cell .fill .label {
+  display: block;
+}
+
 #payment {
   margin-bottom: 30px;
 }
@@ -11630,6 +11652,16 @@ text.label-percent {
 
 #view-repo {
   margin-top: 40px;
+}
+
+.contact-us.warn {
+  border: 2px solid #F67161;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.contact-us a {
+  color: #37BEAC;
 }
 
 #payment .payment {

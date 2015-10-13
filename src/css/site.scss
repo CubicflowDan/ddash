@@ -218,6 +218,33 @@ text.label-percent {
     }
 }
 
+
+#grid {
+    
+    margin-top: 10px;
+    padding: 40px;
+    
+    .cell {
+        
+        padding: 0px;
+        
+        .fill {
+            margin: 0px auto;
+            border-radius: 10px;
+            
+            i.status-good {
+                color: #87ea7b;
+            }
+            
+            .label {
+                display: block;
+                @extend .light-1-txt;
+                @extend .small-txt;
+            }
+        }
+    }
+}
+
 #payment {
     margin-bottom: 30px;
 }
@@ -392,7 +419,18 @@ text.label-percent {
 
 
 
-
+.contact-us {
+    &.warn {
+        border: 2px solid $accent;
+        border-radius: 10px;
+        padding: 10px;
+        @extend .light-1-txt;
+        @extend .small-txt;
+    }
+    a {
+        color: $accent-toned;
+    }
+}
 
 
 #payment {
