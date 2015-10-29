@@ -23,10 +23,6 @@ gulp.task('default', ['build']);
 
 var jsFiles = [
     "materialize.js",
-    "js.js",
-    "cf-parallax.js",
-    "cf-inpageindex.js",
-    "cf-preload.js",
     "app.js",
     "homeCtrl.js",
     "*"
@@ -38,7 +34,7 @@ gulp.task('watch', function () {
     livereload.listen();
     var server = livereload();
     gulp.watch('src/css/*.scss', ['sass']);
-    gulp.watch('src/js/*.js', ['scripts']);
+    gulp.watch('src/js/**/*.js', ['scripts']);
     gulp.watch('src/**/*.html', ['html']);
     gulp.watch('src/assets/**/*', ['assets']);
 });
@@ -47,7 +43,7 @@ gulp.task('watch-dev', function () {
     livereload.listen();
     var server = livereload();
     gulp.watch('src/css/*.scss', ['sass-dev']);
-    gulp.watch('src/js/*.js', ['scripts-dev']);
+    gulp.watch('src/js/**/*.js', ['scripts-dev']);
     gulp.watch('src/**/*.html', ['html']);
     gulp.watch('src/assets/**/*', ['assets']);
 });
@@ -92,7 +88,7 @@ gulp.task('assets', function() {
 });
 
 gulp.task('scripts', function() {
-    return gulp.src('src/js/*.js')
+    return gulp.src('src/js/**/.js')
     .pipe(order(jsFiles))
     .pipe(concat('main.min.js'))
     .pipe(uglify())
@@ -101,7 +97,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('scripts-dev', function() {
-    return gulp.src('src/js/*.js')
+    return gulp.src('src/js/**/*.js')
     .pipe(order(jsFiles))
     .pipe(concat('main.min.js'))
     .pipe(gulp.dest('dist/js/'))

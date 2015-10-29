@@ -1,50 +1,98 @@
 angular.module('app', [
     'ui.router',
-    'ngAnimate'
+    'ngAnimate',
+    'ngResource'
 ])
 .config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider){
     
     $urlRouterProvider.otherwise('/');
     
     $stateProvider
-        .state('home', {
+        .state('login', {
             url: '/',
+            templateUrl: 'templates/login.html',
+            controller: 'LoginCtrl',
+            controllerAs: 'vm'
+        })
+        .state('logout', {
+            url: '/logout',
+            templateUrl: 'templates/logout.html',
+            controller: 'LogoutCtrl',
+            controllerAs: 'vm'
+        })
+        .state('app', {
+            abstract: true,
+            url: '/app',
+            templateUrl: 'app.html',
+            controller: 'appCtrl',
+            controllerAs: 'vm',
+            resolve: appCtrl.resolve
+        })
+        .state('app.overview', {
+            url: '/overview',
             templateUrl: 'templates/home.html',
             controller: 'HomeCtrl',
             controllerAs: 'vm',
             resolve: HomeCtrl.resolve
         })
-        .state('git', {
+        .state('app.git', {
             url: '/git',
             templateUrl: 'templates/git.html',
             controller: 'GitCtrl',
             controllerAs: 'vm',
             resolve: GitCtrl.resolve
         })
-        .state('payment', {
+        .state('app.payment', {
             url: '/payment',
             templateUrl: 'templates/payment.html',
             controller: 'PaymentCtrl',
             controllerAs: 'vm',
             resolve: PaymentCtrl.resolve
         })
-        .state('timeline', {
+        .state('app.timeline', {
             url: '/timeline',
             templateUrl: 'templates/timeline.html',
             controller: 'TimelineCtrl',
             controllerAs: 'vm',
             resolve: TimelineCtrl.resolve
         })
-        .state('documentation', {
+        .state('app.documentation', {
             url: '/documentation',
             templateUrl: 'templates/documentation.html',
             controller: 'DocumentationCtrl',
             controllerAs: 'vm',
             resolve: DocumentationCtrl.resolve
+        })
+        .state('admin', {
+            abstract: true,
+            url: '/admin',
+            templateUrl: 'admin.html',
+            controller: 'AdminCtrl',
+            controllerAs: 'vm'
+        })
+        .state('admin.users', {
+            url: '',
+            templateUrl: 'templates/admin-users.html',
+            controller: 'AdminUserCtrl',
+            controllerAs: 'vm'
         });
     
 }])
+.run(['$rootScope', '$location', 'user', function($rootScope, $location, user) {
 
+    // register listener to watch route changes
+    $rootScope.$on( "$locationChangeStart", function(event, next, current) {
+        if (!user.isLoggedIn) {
+            // no logged user, we should be going to #login
+            if ( next.templateUrl == "login.html" ) {
+              // already going to #login, no redirect needed
+            } else {
+              // not going to #login, we should redirect now
+              $location.path( "/" );
+            }
+        }         
+    });
+}])
 
 
 .factory('gitApiFactory', ['$http', function($http){

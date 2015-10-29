@@ -102,6 +102,9 @@ var cfDashboard = ( function( window, undefined ) {
     };
     
     */
+
+    if (!cf) var cf = {};
+
     cf.loadOverviewGraph = function(container, label, percent){
                     
         var dataset = [

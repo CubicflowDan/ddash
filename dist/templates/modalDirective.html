@@ -1,0 +1,116 @@
+<div ng-switch="vm.modalFactory.currentTemplate" ng-if="vm.modalFactory.showModal" class="dd-modal">
+    
+    <!-- TEMPLATE FOR NEW USER -->
+    <div ng-switch-when="newUser" class="modal-container">
+        <div class="modal-close">
+        </div>
+
+        <div class="modal-title">
+            New User
+        </div>
+        
+        <div ng-show="vm.statusMessage" class="modal-status-message">
+            {{vm.statusMessage}}
+        </div>
+        
+        <form>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                      <input ng-model="vm.formData.username" required id="username" type="text">
+                      <label for="username">Name</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                      <input ng-model="vm.formData.email" required id="email" type="email">
+                      <label for="email">Email</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                      <input ng-model="vm.formData.password" required id="password" type="password">
+                      <label for="password">Password</label>
+                    </div>
+                    <div class="col s12 m6">
+                        <input ng-model="vm.formData.isAdmin" type="checkbox" id="isAdmin" />
+                        <label for="isAdmin">Is this user an Admin?</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-confirm">
+                <input type="submit" ng-click="vm.createUser()" class="btn waves-effect waves-light" value="Create User">
+            </div>
+        </form>
+        
+    </div>
+    
+    <!-- TEMPLATE FOR DELETE USER -->
+    <div ng-switch-when="deleteUser" class="modal-container">
+        <div class="modal-close">
+        </div>
+
+        <div class="modal-title">
+            Delete User
+        </div>
+
+        <div class="modal-body">
+            <div class="row">
+                <div class="input-field col s12">
+                    Are you sure you want to delete the user "{{vm.modalFactory.currentlyEditing.username}}"?
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-confirm">
+            <input type="submit" ng-click="vm.deleteUser()" class="btn waves-effect waves-light" value="Delete User">
+        </div>
+        
+    </div>
+    
+    
+    <!-- TEMPLATE FOR EDIT USER -->
+    <div ng-switch-when="editUser" class="modal-container">
+        <div class="modal-close">
+        </div>
+
+        <div class="modal-title">
+            Edit User
+        </div>
+
+        <div class="modal-body">
+            <div class="row">
+                <div class="input-field col s12 m6">
+                  <input ng-model="vm.formData.username" required id="username" type="text">
+                  <label for="username">Name</label>
+                </div>
+                <div class="input-field col s12 m6">
+                  <input ng-model="vm.formData.email" required id="email" type="email">
+                  <label for="email">Email</label>
+                </div>
+                <div class="col s12 m6">
+                    <input ng-model="vm.formData.isAdmin" type="checkbox" id="isAdmin" />
+                    <label for="isAdmin">Is this user an Admin?</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-confirm">
+            <input type="submit" ng-click="vm.editUser()" class="btn waves-effect waves-light" value="Edit User">
+        </div>
+        
+    </div>
+    
+    
+    <!-- TEMPLATE FOR FLASH -->
+    <div ng-switch-when="flash" class="modal-container">
+        <div class="modal-close">
+        </div>
+
+        <div class="modal-title center-align">
+            {{vm.flashMessage}}
+        </div>
+        
+    </div>
+    
+    <div ng-click="vm.closeModal()" class="modal-overlay">
+    </div>
+    
+</div>

@@ -1,0 +1,38 @@
+<modal-window></modal-window>
+
+<div class="hide-on-small-and-down" id="sidenav">
+    <div class="logo">
+        <img src="assets/cf-logo.svg">
+    </div>
+    <div class="nav-links">
+        <a ui-sref='admin.users' ui-sref-active='active'>
+            Users
+        </a>
+        <a ui-sref='admin.projects' ui-sref-active='active'>
+            Projects
+        </a>
+        <a ui-sref='admin.payments' ui-sref-active='active'>
+            Payments
+        </a>
+    </div>
+</div>
+
+<div id="content-container">
+
+    <main class="container view" ui-view>
+
+    </main>
+
+    <div id="footer" class="container">
+        <img class="cf-logo" src="assets/cf-logo.svg">
+        Project Dashboard is an open source project proudly powered by Cubicflow
+    </div>
+
+</div>
+        
+<nav class="hide-on-med-and-up">
+    <a ui-sref="home" ui-sref-active="active">
+        <i class="material-icons">info_outline</i>
+        <span class="label">Overview</span>
+    </a>
+</nav>

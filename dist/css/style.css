@@ -10794,7 +10794,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   color: #737A7E;
 }
 
-.light-1-txt, #main-nav .row a:hover, #main-nav .row a.active, footer .footer-label, body, h2, .header h2, #grid .cell .fill .label, #footer, .contact-us.warn {
+.light-1-txt, #main-nav .row a:hover, #main-nav .row a.active, footer .footer-label, body, h2, .warn, .header h2, #grid .cell .fill .label, #footer, .dd-modal .modal-title {
   color: #FFF;
 }
 
@@ -10812,7 +10812,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   line-height: 44px;
 }
 
-.large-txt, h2, #timeline #phases .phase .phase-labels, #timeline #phases .phase .phase-name {
+.large-txt, h2, #timeline #phases .phase .phase-labels, #timeline #phases .phase .phase-name, .dd-modal .modal-title {
   font-size: 20px;
   line-height: 38px;
 }
@@ -10822,12 +10822,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   line-height: 20px;
 }
 
-.small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #grid .cell .fill .label, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, .contact-us.warn, #gallery span.image-label {
+.small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, .warn, #grid .cell .fill .label, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, #gallery span.image-label {
   font-size: 13px;
   line-height: 16px;
 }
 
-.xsmall-txt, footer.footer-dark {
+.xsmall-txt, footer.footer-dark, #admin-users .user .details {
   font-size: 10px;
   line-height: 12px;
 }
@@ -10841,7 +10841,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     font-size: 40px;
     line-height: 56px;
   }
-  .large-txt, h2, #timeline #phases .phase .phase-labels, #timeline #phases .phase .phase-name {
+  .large-txt, h2, #timeline #phases .phase .phase-labels, #timeline #phases .phase .phase-name, .dd-modal .modal-title {
     font-size: 24px;
     line-height: 42px;
   }
@@ -10849,11 +10849,11 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     font-size: 18px;
     line-height: 22px;
   }
-  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #grid .cell .fill .label, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, .contact-us.warn, #gallery span.image-label {
+  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, .warn, #grid .cell .fill .label, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, #gallery span.image-label {
     font-size: 15px;
     line-height: 18px;
   }
-  .xsmall-txt, footer.footer-dark {
+  .xsmall-txt, footer.footer-dark, #admin-users .user .details {
     font-size: 12px;
     line-height: 14px;
   }
@@ -10868,7 +10868,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     font-size: 49px;
     line-height: 57px;
   }
-  .large-txt, h2, #timeline #phases .phase .phase-labels, #timeline #phases .phase .phase-name {
+  .large-txt, h2, #timeline #phases .phase .phase-labels, #timeline #phases .phase .phase-name, .dd-modal .modal-title {
     font-size: 25px;
     line-height: 44px;
   }
@@ -10876,11 +10876,11 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     font-size: 19px;
     line-height: 23px;
   }
-  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, #grid .cell .fill .label, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, .contact-us.warn, #gallery span.image-label {
+  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, .warn, #grid .cell .fill .label, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, #gallery span.image-label {
     font-size: 16px;
     line-height: 19px;
   }
-  .xsmall-txt, footer.footer-dark {
+  .xsmall-txt, footer.footer-dark, #admin-users .user .details {
     font-size: 13px;
     line-height: 15px;
   }
@@ -11460,6 +11460,12 @@ div.divider {
   line-height: 30px;
 }
 
+.warn {
+  border: 2px solid #F67161;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 .graph {
   margin-bottom: 30px;
   margin-top: 20px;
@@ -11654,12 +11660,6 @@ text.label-percent {
   margin-top: 40px;
 }
 
-.contact-us.warn {
-  border: 2px solid #F67161;
-  border-radius: 10px;
-  padding: 10px;
-}
-
 .contact-us a {
   color: #37BEAC;
 }
@@ -11696,4 +11696,119 @@ text.label-percent {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+#login-overlay {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  opacity: 0.001;
+  z-index: 1;
+}
+
+#login {
+  text-align: center;
+  position: relative;
+  z-index: 200;
+}
+
+#login #login-form {
+  margin: 0px auto;
+  max-width: 400px;
+}
+
+#login button {
+  margin-top: 40px;
+}
+
+#login .notification {
+  margin-bottom: 50px;
+}
+
+#admin-users .add-new-user {
+  margin: 20px 0px;
+}
+
+#admin-users .user {
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 10px;
+  position: relative;
+}
+
+#admin-users .user i {
+  font-size: 20px;
+}
+
+#admin-users .user i.delete {
+  color: #F67161;
+}
+
+#admin-users .user i.edit {
+  color: #37BEAC;
+}
+
+#admin-users .user .controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.dd-modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  opacity: 1;
+  color: #383735;
+}
+
+.dd-modal .modal-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  background-color: #000;
+  opacity: 0.7;
+}
+
+.dd-modal .modal-container {
+  max-width: 600px;
+  width: 90%;
+  margin: 0px auto 70px auto;
+  background-color: #FFF;
+  position: relative;
+  top: 10%;
+  overflow: scroll;
+  z-index: 12;
+}
+
+.dd-modal .modal-title {
+  padding: 20px;
+  overflow: auto;
+  background-color: #F67161;
+}
+
+.dd-modal .modal-body {
+  padding: 20px 20px;
+}
+
+.dd-modal .modal-confirm {
+  text-align: center;
+  background-color: #CCC;
+  padding: 20px;
+}
+
+.dd-modal .modal-status-message {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dd-modal .col {
+  margin-top: 30px;
 }

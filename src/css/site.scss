@@ -179,6 +179,14 @@ div.divider {
     }
 }
 
+.warn {
+    border: 2px solid $accent;
+    border-radius: 10px;
+    padding: 10px;
+    @extend .light-1-txt;
+    @extend .small-txt;
+}
+
 .graph {
     margin-bottom: 30px;
     margin-top: 20px;
@@ -420,13 +428,6 @@ text.label-percent {
 
 
 .contact-us {
-    &.warn {
-        border: 2px solid $accent;
-        border-radius: 10px;
-        padding: 10px;
-        @extend .light-1-txt;
-        @extend .small-txt;
-    }
     a {
         color: $accent-toned;
     }
@@ -480,4 +481,154 @@ text.label-percent {
     span.image-label {
         @extend .small-txt;   
     }
+}
+
+
+
+
+#login-overlay {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    opacity: 0.001;
+    z-index: 1;
+}
+
+#login {
+    
+    text-align: center;
+    position: relative;
+    z-index: 200;
+    
+    #login-form {
+        margin: 0px auto;
+        max-width: 400px;
+    }
+    
+    button {
+        
+        margin-top: 40px;
+    }
+    
+    .notification {
+        margin-bottom: 50px;
+    }
+
+    
+}
+
+
+#admin-users {
+    
+    .add-new-user {
+        margin: 20px 0px;
+    }
+    
+    .user {
+        
+        margin-bottom: 30px;
+        padding: 10px;
+        background-color: #333;
+        border-radius: 10px;
+        position: relative;
+        
+        .details {
+            @extend .xsmall-txt;
+        }
+        
+        i {
+            font-size: 20px;   
+        }
+        i.delete {
+            color: $accent;
+        }
+        i.edit {
+            color: $accent-toned;
+        }
+        
+        .controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        
+    }
+    
+}
+
+
+
+
+
+
+
+//EDIT MODAL DIRECTIVE
+
+.dd-modal {
+   
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    opacity: 1;
+    color: $dark-1-txt;
+    
+    .modal-overlay {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        background-color: #000;
+        opacity: 0.7;
+    }
+    
+    .modal-container {
+        max-width: 600px;
+        width: 90%;
+        margin: 0px auto 70px auto;
+        background-color: #FFF;
+        position: relative;
+        top: 10%;
+        overflow: scroll;
+        z-index: 12;
+        
+    }
+    
+    .modal-title {
+        
+        @extend .large-txt;
+        padding: 20px;
+        @extend .light-1-txt;
+        overflow: auto;
+        background-color: $accent;
+        
+    }
+    
+    .modal-body{
+        padding: 20px 20px;
+    }
+    
+    .modal-confirm {
+        text-align: center;
+        background-color: #CCC;
+        padding: 20px;
+    }
+    
+    .modal-status-message{
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .col {
+        margin-top: 30px;
+    }
+    
+    .edit {
+        
+    }
+    
 }
