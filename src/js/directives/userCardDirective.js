@@ -12,9 +12,6 @@ var userCardController = function(modalFactory){
     vm.modalFactory = modalFactory;
     vm.deleted = false;
     
-    vm.editUser = function(user){
-        modalFactory.edit.user(user);
-    };
     
     vm.deleteUser = function(user){
         
@@ -32,10 +29,8 @@ var userCardController = function(modalFactory){
         
         modalFactory.edit.user(user).then(function(res){
             console.log(res);
-            vm.deleted = true;
         }).catch(function(err){
             console.log(err);
-            vm.deleted = false;
         });
         
     };

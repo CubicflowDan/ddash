@@ -16,6 +16,12 @@ var adminApiFactory = function($http, user){
         });
     };
     
+    factory.editUser = function(userData){
+        return $http.put( baseUrl + 'user/' + userData._id, userData, function(res){
+           return res; 
+        });
+    };
+    
     factory.deleteUser = function(userData){
         return $http.delete( baseUrl + 'user/' + userData._id, userData, function(res){
            return res; 
