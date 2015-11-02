@@ -1,0 +1,63 @@
+<modal-window></modal-window>
+
+<div class="hide-on-small-and-down" id="sidenav">
+    <div class="logo">
+        <img src="assets/cf-logo.svg">
+    </div>
+    <div class="nav-links">
+        <a ui-sref='app.overview' ui-sref-active='active'>
+            Overview
+        </a>
+        <a ui-sref='app.timeline' ui-sref-active='active'>
+            Timeline
+        </a>
+        <a ui-sref='app.git' ui-sref-active='active'>
+            Git
+        </a>
+        <a ui-sref='app.payment' ui-sref-active='active'>
+            Payments
+        </a>
+        <a ui-sref='app.documentation' ui-sref-active='active'>
+            Files
+        </a>
+        <a ng-show="vm.isAdmin" ui-sref='admin.users' ui-sref-active='active'>
+            Admin
+        </a>
+    </div>
+</div>
+
+<div id="content-container">
+
+    <main class="container view" ui-view>
+
+    </main>
+
+    <div id="footer" class="container">
+        <img class="cf-logo" src="assets/cf-logo.svg">
+        Project Dashboard is an open source project proudly powered by Cubicflow
+    </div>
+
+</div>
+
+<nav class="hide-on-med-and-up">
+    <a ui-sref="home" ui-sref-active="active">
+        <i class="material-icons">info_outline</i>
+        <span class="label">Overview</span>
+    </a>
+    <a ui-sref="timeline" ui-sref-active="active">
+        <i class="material-icons">schedule</i>
+        <span class="label">Timeline</span>
+    </a>
+    <a ui-sref="documentation" ui-sref-active="active">
+        <i class="material-icons">assignment</i>
+        <span class="label">Files</span>
+    </a>
+    <a ui-sref="git" ui-sref-active="active">
+        <i class="material-icons">track_changes</i>
+        <span class="label">Git</span>
+    </a>
+    <a ui-sref="payment" ui-sref-active="active">
+        <i class="material-icons">payment</i>
+        <span class="label">Payment</span>
+    </a>
+</nav>

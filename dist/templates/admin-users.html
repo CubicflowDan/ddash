@@ -1,0 +1,17 @@
+<div id="admin-users" class="page">
+
+    <div class="header">
+        <h2>Ddash Admin</h2>
+        <span id="project-name-label">Users</span>
+    </div>
+    
+    <div class="add-new-user right-align">
+        <div ng-click="vm.newUser()" class="btn waves-effect waves-light">New User</div>
+    </div>
+    
+    <div ng-repeat="user in vm.users">
+        
+        <div user-card></div>
+    </div>
+    
+</div>

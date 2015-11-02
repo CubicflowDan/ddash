@@ -1,0 +1,37 @@
+<div id="admin-users" class="page">
+
+    <div class="header">
+        <h2>Ddash Admin</h2>
+        <span id="project-name-label">Projects</span>
+    </div>
+    
+    <div class="add-new-user right-align">
+        <a ng-click="vm.newProject()"><i class="material-icons medium">playlist_add</i></a>
+    </div>
+    
+    <div ng-repeat="project in vm.projects">
+        
+        <div class="card project">
+
+            <h2>{{project.name}}</h2>
+
+            <div class="details">
+                <span class="accent">Repo Type: </span>{{project.gitRepoType}} <br>
+
+                <span class="accent">Users: </span><a ng-repeat="user in project.users" href="#!" class="collection-item">{{user.username}} </a>
+            </div>
+            
+            <div class="center-align">
+            </div>
+            
+            <div class="controls">
+                <a ng-click="vm.deleteUser(user)"><i class="material-icons delete">delete</i></a>
+                <a ng-click="vm.editUser(user)"><i class="material-icons edit">edit</i></a>
+                <a ng-click="vm.deleteUser(user)"><i class="material-icons">open_in_new</i></a>
+            </div>
+
+        </div>
+        
+    </div>
+    
+</div>

@@ -1,0 +1,39 @@
+
+<div id="payment" class="page">
+
+    <div class="header">
+        <h2>{{vm.data.projectName}}</h2>
+        <span id="project-name-label">Payments</span>
+    </div>
+
+    <div class="row">
+        <div class="col s12 center-align">
+
+            <div id="progress" class="graph">
+            </div>
+        </div>
+
+
+        <div class="col s12 center-align info">
+
+            <span class="info-line">Project Cost: <span class="label">${{vm.data.totalCost}}</span></span>
+            <span class="info-line">Current Paid: <span class="label">${{vm.data.totalPaid}}</span></span>
+            <span class="info-line">Next Payment Due: <span class="label">{{vm.data.paymentDue}}</span></span>
+
+        </div>
+
+    </div>
+    
+    <div class="contact-us warn">
+        If you see any information in this section that you believe to be in error please <a href="#">contact us</a> immediately
+    </div>
+    
+    <div id="payments-received">
+        <h2>Payments Received</h2>
+        <div ng-repeat="payment in vm.data.paymentsReceived" class="payment">
+            <div class="payment-ammount">${{payment.ammount}}</div>
+            <div class="payment-date">{{payment.date | date: 'medium'}}</div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,115 @@
+{
+    "projectName" : "DDash Cubicflow",
+    "projectUrl" : "cubicflow.com/ddash",
+    
+    "startDate" : "11/11/11",
+    "goal" : "11/11/12",
+    
+    "repoType" : "github",
+    "gitUsername" : "BackdoorDan",
+    "gitRepoName" : "ddash",
+    "repoUrl" : "https://github.com/BackdoorDan/ddash.git",
+    
+    "developerEmail" : "dan.mcnair@gmail.com",
+    "developerName": "Cubicflow",
+    
+    "currentPhase" : "Design",
+    "phaseCompletion": 60,
+    "totalCompletion": 40,
+    
+    "totalCost": 4500,
+    "paymentDue": "On Completion",
+    "paymentsReceived": [
+        {
+            "ammount": 500,
+            "date": "06/10/14"
+        },
+        {
+            "ammount": 1500,
+            "date": "10/10/14"
+        },
+        {
+            "ammount": 1500,
+            "date": "01/12/14"
+        }
+    ],
+    
+    "timeline": [
+        {
+        "phaseName": "Discovery",
+        "items": [
+            {"name": "Discovery Meeting", "status": "done"},
+            {"name": "Brainstorming Meeting", "status": "done"},
+            {"name": "Market Research", "status": "done"},
+            {"name": "Asset Gathering", "status": "done"}
+            ]
+        },
+        {
+        "phaseName": "Planning",
+        "items": [
+            {"name": "Site Structure", "status": "done"},
+            {"name": "Wireframes", "status": "done"},
+            {"name": "Develop Stack", "status": "done"},
+            {"name": "Copy Draft", "status": "done"}
+            ]
+        },
+        {
+        "phaseName": "Design",
+        "items": [
+            {"name": "Brand Design", "status": "done"},
+            {"name": "Style Guide", "status": "in-progress"},
+            {"name": "Page Layout", "status": "in-progress"},
+            {"name": "Responsive Design", "status": "incomplete"}
+            ]
+        },
+        {
+        "phaseName": "Development",
+        "items": [
+            {"name": "Server Setup", "status": "incomplete"},
+            {"name": "CMS install", "status": "incomplete"},
+            {"name": "Theme Creation", "status": "incomplete"},
+            {"name": "Ecommerce Integration", "status": "incomplete"},
+            {"name": "QC Testing", "status": "incomplete"}
+            ]
+        }
+    ],
+    
+    
+    "gallery": [
+        {
+        "imgTitle": "DDash Screenshot", 
+        "imgUrl": "assets/gallery/app.jpg"
+        },
+        {
+        "imgTitle": "DDash Logo", 
+        "imgUrl": "assets/gallery/logo.jpg"
+        }
+    ],
+    
+    "files": [
+        {
+        "name": "Project Specs", 
+        "fileLocation": "google.com"
+        },
+        {
+        "name": "Work Agreement", 
+        "location": "google.com"
+        },
+        {
+        "name": "Nondisclosure Agreement", 
+        "location": "google.com"
+        },
+        {
+        "name": "Modified Work Agreement", 
+        "location": "google.com"
+        },
+        {
+        "name": "Initial Deposit Invoice", 
+        "location": "google.com"
+        }
+    ]
+    
+    
+    
+    
+}

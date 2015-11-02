@@ -1,0 +1,26 @@
+{
+  "name": "Cubicflow BoilerPlate",
+  "version": "1",
+  "authors": [
+    "BackdoorDan <d.anmcn.air@gmail.com>"
+  ],
+  "description": "Boilerplate for CF HTML5 projects without major dependencies",
+  "main": "dist/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "d3": "~3.5.6",
+    "angular": "~1.4.7",
+    "angular-ui-router": "~0.2.15",
+    "angular-animate": "~1.4.7",
+    "angular-resource": "~1.4.7"
+  },
+  "devDependencies": {}
+}
