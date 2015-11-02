@@ -10822,7 +10822,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   line-height: 20px;
 }
 
-.small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, .warn, #grid .cell .fill .label, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, #gallery span.image-label {
+.small-txt, #main-nav, #cf-inpageindex h2, .btn, .btn-large, .info .info-line, .warn, #grid .cell .fill .label, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, #gallery span.image-label {
   font-size: 13px;
   line-height: 16px;
 }
@@ -10849,7 +10849,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     font-size: 18px;
     line-height: 22px;
   }
-  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, .warn, #grid .cell .fill .label, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, #gallery span.image-label {
+  .small-txt, #main-nav, #cf-inpageindex h2, .btn, .btn-large, .info .info-line, .warn, #grid .cell .fill .label, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, #gallery span.image-label {
     font-size: 15px;
     line-height: 18px;
   }
@@ -10876,7 +10876,7 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     font-size: 19px;
     line-height: 23px;
   }
-  .small-txt, #main-nav, #cf-inpageindex h2, .info .info-line, .warn, #grid .cell .fill .label, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, #gallery span.image-label {
+  .small-txt, #main-nav, #cf-inpageindex h2, .btn, .btn-large, .info .info-line, .warn, #grid .cell .fill .label, #footer, #commits .commit .commit-message, #commits .commit .commit-labels .commit-meta, #gallery span.image-label {
     font-size: 16px;
     line-height: 19px;
   }
@@ -11264,35 +11264,8 @@ footer .footer-logo {
   color: #F67161;
 }
 
-/* label focus color */
-.input-field input[type=text]:focus + label {
-  color: #F67161;
-}
-
-/* label underline focus color */
-.input-field input[type=text]:focus {
-  border-bottom: 1px solid #F67161;
-  box-shadow: 0 1px 0 0 #F67161;
-}
-
-/* valid color */
-.input-field input[type=text].valid {
-  border-bottom: 1px solid #F67161;
-  box-shadow: 0 1px 0 0 #F67161;
-}
-
-/* invalid color */
-.input-field input[type=text].invalid {
-  border-bottom: 1px solid #F67161;
-  box-shadow: 0 1px 0 0 #F67161;
-}
-
-/* icon prefix focus color */
-.input-field .prefix.active {
-  color: #F67161;
-}
-
 .btn, .btn-large {
+  line-height: 35px;
   background-color: #F67161;
 }
 
@@ -11741,27 +11714,25 @@ text.label-percent {
   background-position: center;
 }
 
-#login-overlay {
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  opacity: 0.001;
-  z-index: 1;
-}
-
 #login {
   text-align: center;
   position: relative;
   z-index: 200;
 }
 
+#login .ddash-logo {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+#login .ddash-logo img {
+  width: 70%;
+  max-width: 300px;
+}
+
 #login #login-form {
   margin: 0px auto;
-  max-width: 400px;
+  max-width: 500px;
 }
 
 #login button {
@@ -11769,11 +11740,8 @@ text.label-percent {
 }
 
 #login .notification {
-  margin-bottom: 50px;
-}
-
-#admin-users .add-new-user {
-  margin: 20px 0px;
+  margin-bottom: 0px;
+  margin: 0px 20px;
 }
 
 #admin-users .user.admin {
@@ -11832,4 +11800,12 @@ text.label-percent {
 
 .dd-modal .col {
   margin-top: 30px;
+}
+
+.control-bar {
+  margin-bottom: 20px;
+}
+
+.control-bar .btn i, .control-bar .btn-large i {
+  font-size: 23px;
 }

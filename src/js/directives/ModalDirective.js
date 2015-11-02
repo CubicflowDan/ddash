@@ -1,7 +1,6 @@
 var modalLink = function(scope, element, attrs){
     
     
-    
 };
 
 var modalController = function($scope, modalFactory, adminApiFactory, $q, $rootScope){
@@ -37,6 +36,14 @@ var modalController = function($scope, modalFactory, adminApiFactory, $q, $rootS
         vm.currentTemplate = 'deleteUser';
         vm.deferred = deferred;
         vm.currentlyEditing = user;
+    });
+    
+    $rootScope.$on('modal:new:project', function (event, deferred, user) {
+        vm.reset();
+        vm.showModal = true;
+        vm.currentTemplate = 'newProject';
+        vm.deferred = deferred;
+        
     });
     
     
@@ -117,6 +124,28 @@ var modalController = function($scope, modalFactory, adminApiFactory, $q, $rootS
         vm.currentTemplate = 'flash';
         vm.flashMessage = message;
     }
+    
+    
+    vm.createProject = function(){
+        
+        if (!vm.formData.name){
+            vm.statusMessage = 'Oops! Fill out all required fields.'
+            return;
+        }
+            
+        adminApiFactory.createProject(vm.formData).then(function(res){
+            
+            vm.flash('Success');
+            vm.deferred.resolve(res);
+            
+        }).catch(function(err){
+            
+            vm.flash('Something went wrong');
+            vm.deferred.reject(err);
+            
+        });
+    };
+    
     
 };
 

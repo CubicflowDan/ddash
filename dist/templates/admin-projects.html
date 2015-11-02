@@ -5,8 +5,8 @@
         <span id="project-name-label">Projects</span>
     </div>
     
-    <div class="add-new-user right-align">
-        <a ng-click="vm.newProject()"><i class="material-icons medium">playlist_add</i></a>
+    <div class="control-bar right-align">
+        <a ng-click="vm.newProject()" class="btn waves-effect waves-light"><i class="material-icons">add</i></a>
     </div>
     
     <div ng-repeat="project in vm.projects">
@@ -25,9 +25,7 @@
             </div>
             
             <div class="controls">
-                <a ng-click="vm.deleteUser(user)"><i class="material-icons delete">delete</i></a>
-                <a ng-click="vm.editUser(user)"><i class="material-icons edit">edit</i></a>
-                <a ng-click="vm.deleteUser(user)"><i class="material-icons">open_in_new</i></a>
+                <a ng-click=""><i class="material-icons">open_in_new</i></a>
             </div>
 
         </div>

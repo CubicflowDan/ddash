@@ -531,28 +531,25 @@ text.label-percent {
 
 
 
-
-#login-overlay {
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    opacity: 0.001;
-    z-index: 1;
-}
-
 #login {
     
     text-align: center;
     position: relative;
     z-index: 200;
     
+    .ddash-logo {
+        margin-top: 60px;
+        margin-bottom: 40px;
+        
+        img {
+            width: 70%;
+            max-width: 300px;
+        }
+    }
+    
     #login-form {
         margin: 0px auto;
-        max-width: 400px;
+        max-width: 500px;
     }
     
     button {
@@ -561,7 +558,8 @@ text.label-percent {
     }
     
     .notification {
-        margin-bottom: 50px;
+        margin-bottom: 0px;
+        margin: 0px 20px;
     }
 
     
@@ -569,11 +567,7 @@ text.label-percent {
 
 
 #admin-users {
-    
-    .add-new-user {
-        margin: 20px 0px;
-    }
-    
+        
     .user {
         
         @extend .card;
@@ -657,4 +651,16 @@ text.label-percent {
         
     }
     
+}
+
+
+
+.control-bar {
+    margin-bottom: 20px;
+    
+    .btn {
+        i {
+            font-size: 23px;
+        }
+    }
 }

@@ -30,8 +30,14 @@ var adminApiFactory = function($http, user){
     };
     
     // PROJECTS
-    factory.getAllProjects = function(userData){
+    factory.getAllProjects = function(){
         return $http.get( baseUrl + 'project/all', function(res){
+           return res; 
+        });
+    };
+    
+    factory.createProject = function(projectData){
+        return $http.post( baseUrl + 'project/', projectData, function(res){
            return res; 
         });
     };

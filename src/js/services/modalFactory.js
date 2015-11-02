@@ -45,6 +45,18 @@ var modalFactory = function($q, $rootScope){
     
     
     
+    
+    
+    factory.new.project = function(){
+        
+        var deferred = $q.defer();
+        $rootScope.$emit('modal:new:project', deferred);
+        
+        return deferred.promise;
+    };
+    
+    
+    
     return factory;
     
 };
